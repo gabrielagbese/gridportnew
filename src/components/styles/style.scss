@@ -1,42 +1,4 @@
-$breakpoints: (
-    "xs": 0,
-    "sm": 480,
-    "md": 720,
-    "lg": 960,
-    "xl": 1200,
-);
-
-//media query mixins
-@mixin xs {
-    @media (min-width: map-get($breakpoints, "xs")) {
-        @content;
-    }
-}
-
-@mixin sm {
-    @media (min-width: map-get($breakpoints, "sm")) {
-        @content;
-    }
-}
-
-@mixin md {
-    @media (min-width: map-get($breakpoints, "md")) {
-        @content;
-    }
-}
-
-@mixin lg {
-    @media (min-width: map-get($breakpoints, "lg")) {
-        @content;
-    }
-}
-
-@mixin xl {
-    @media (min-width: map-get($breakpoints, "xl")) {
-        @content;
-    }
-}
-
+@import 'breakpoints';
 
 
 html, body {margin: 0; height: 100%; overflow: hidden; background-color: #000000;}
@@ -57,47 +19,62 @@ html, body {margin: 0; height: 100%; overflow: hidden; background-color: #000000
     margin-top: 10vh;
     width: 70vw;
     height: 90vh;
-    //border: solid thin red;
+    border: solid thin red;
     display: flex;
 }
 
 .hero{
-    margin-top: 30vh;
-    padding-left: 1em;
+    @include xs{
+        margin-top: 10vh;
+    }
+
+    @include md{
+        margin-top: 30vh;
+        padding-left: 1em;
+    }
+    
 }
 
 .name-container{
-    @include breakpoint(xs){
-        border: solid thick rgb(0, 195, 255);
-    }
-    @include sm{
-        border: solid thick red;
-    }
+
     @include md{
-        border: solid thick green;
+        display: flex;
     }
-    @include lg{
-        border: solid thick yellow;
-    }
-    @include xl(){
-        border: solid thick purple;
-    }
+
 }
 
 .name{
-    font-size: 5rem;
-    padding-right: 1rem;
-    margin-left: -0.1em;
+
+    @include xs{
+        font-size: 4rem;
+        margin-top: 0.5em;
+        padding-right: 1rem;
+        margin-left: -0.1em;
+    }
+    @include md{
+        font-size: 5rem;
+        padding-right: 1rem;
+        margin-left: -0.1em;
+    }
 }
 
 .job-title{
-    font-size: 2.55rem;
-    padding-top: 0.75em;
-    text-decoration: underline;
+
+    @include xs{
+        font-size: 1.75rem;
+        padding-top: 0.75em;
+        line-height: 1em;
+        text-decoration: underline;
+    }
+    @include md{
+        font-size: 2.55rem;
+        padding-top: 0.75em;
+        text-decoration: underline;
+    }
 }
 
 .sub-heading{
-    font-size: 1.5rem;
+    font-size: 1.2rem;
 }
 
 .box-button{
@@ -193,11 +170,11 @@ html, body {margin: 0; height: 100%; overflow: hidden; background-color: #000000
   }
   
   .letter-changer::before {
-    animation: changeLetter 20s linear 1s infinite normal forwards;
+    animation: changeLetter 16s linear 1s infinite normal forwards;
     content: "";
   }
   .letter-changer::after {
-    animation: cursor 0.6s linear 20.2s infinite normal forwards;
+    animation: cursor 0.6s linear 16.4s infinite normal forwards;
     content: "|";
   }
   .accessibility {
