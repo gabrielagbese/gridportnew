@@ -8,7 +8,9 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
+import Container from "./container"
 import "./layout.css"
+import "./styles/style.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -23,14 +25,10 @@ const Layout = ({ children }) => {
 
   return (
     <>
-      
-      <footer
-          style={{
-            marginTop: `2rem`,
-          }}
-        >
-          © {new Date().getFullYear()}, Gabriel Agbese
-        </footer>
+      <div className="wrapper">
+        
+        <Container />
+      </div>
     </>
   )
 }

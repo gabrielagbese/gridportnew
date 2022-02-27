@@ -1,0 +1,76 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+.text-white {
+  color: white;
+}
+
+.wrapper {
+  background-color: #000000;
+  opacity: 1;
+  background-image: linear-gradient(#1d1d1d 1.1px, transparent 1.1px), linear-gradient(to right, #1d1d1d 1.1px, #000000 1.1px);
+  background-size: 22px 22px;
+  width: 100vw;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.container {
+  margin-top: 10vh;
+  width: 80vw;
+  height: 90vh;
+  border: solid thin red;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hero {
+  margin-top: 30vh;
+}
+
+.box-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0.5rem;
+}
+
+.box {
+  min-width: 5em;
+  min-height: 2.5em;
+}
+
+.box.white {
+  border: solid thin orange;
+  margin-bottom: -2.75em;
+}
+
+.box.black {
+  background-color: black;
+  border: solid thin white;
+  z-index: 2;
+  margin-left: 0.5em;
+}
+
+.cta-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*# sourceMappingURL=style.css.map */
