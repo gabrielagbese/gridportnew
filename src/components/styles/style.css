@@ -2,6 +2,7 @@ html, body {
   margin: 0;
   height: 100%;
   overflow: hidden;
+  background-color: #000000;
 }
 
 .text-white {
@@ -10,9 +11,8 @@ html, body {
 
 .wrapper {
   background-color: #000000;
-  opacity: 1;
-  background-image: linear-gradient(#1d1d1d 1.1px, transparent 1.1px), linear-gradient(to right, #1d1d1d 1.1px, #000000 1.1px);
-  background-size: 22px 22px;
+  background-image: linear-gradient(rgba(29, 29, 29, 0.8) 1.1px, transparent 1.1px), linear-gradient(to right, rgba(29, 29, 29, 0.8) 1.1px, #000000 1.1px);
+  background-size: 19px 19px;
   width: 100vw;
   height: 100vh;
   display: -webkit-box;
@@ -25,9 +25,8 @@ html, body {
 
 .container {
   margin-top: 10vh;
-  width: 80vw;
+  width: 70vw;
   height: 90vh;
-  border: solid thin red;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -35,6 +34,53 @@ html, body {
 
 .hero {
   margin-top: 30vh;
+  padding-left: 1em;
+}
+
+@media (min-width: 0) {
+  .name-container {
+    border: solid thick #00c3ff;
+  }
+}
+
+@media (min-width: 480) {
+  .name-container {
+    border: solid thick red;
+  }
+}
+
+@media (min-width: 720) {
+  .name-container {
+    border: solid thick green;
+  }
+}
+
+@media (min-width: 960) {
+  .name-container {
+    border: solid thick yellow;
+  }
+}
+
+@media (min-width: 1200) {
+  .name-container {
+    border: solid thick purple;
+  }
+}
+
+.name {
+  font-size: 5rem;
+  padding-right: 1rem;
+  margin-left: -0.1em;
+}
+
+.job-title {
+  font-size: 2.55rem;
+  padding-top: 0.75em;
+  text-decoration: underline;
+}
+
+.sub-heading {
+  font-size: 1.5rem;
 }
 
 .box-button {
@@ -48,7 +94,7 @@ html, body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 0.5rem;
+  padding-right: 0.5rem;
 }
 
 .box {
@@ -56,12 +102,12 @@ html, body {
   min-height: 2.5em;
 }
 
-.box.white {
+.box.colored {
   border: solid thin orange;
   margin-bottom: -2.75em;
 }
 
-.box.black {
+.box.white {
   background-color: black;
   border: solid thin white;
   z-index: 2;
@@ -72,5 +118,396 @@ html, body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+@-webkit-keyframes changeLetter {
+  0% {
+    content: "";
+  }
+  2% {
+    content: "P";
+  }
+  4% {
+    content: "Pa";
+  }
+  6% {
+    content: "Par";
+  }
+  8% {
+    content: "Part";
+  }
+  10% {
+    content: "Part-";
+  }
+  12% {
+    content: "Part-T";
+  }
+  14% {
+    content: "Part-Ti";
+  }
+  16% {
+    content: "Part-Tim";
+  }
+  18% {
+    content: "Part-Time";
+  }
+  20% {
+    content: "Part-Tim";
+  }
+  22% {
+    content: "Part-Ti";
+  }
+  24% {
+    content: "Part-T";
+  }
+  26% {
+    content: "Part-";
+  }
+  28% {
+    content: "Part";
+  }
+  30% {
+    content: "Par";
+  }
+  32% {
+    content: "Pa";
+  }
+  34% {
+    content: "P";
+  }
+  36% {
+    content: "";
+  }
+  38% {
+    content: "I";
+  }
+  40% {
+    content: "In";
+  }
+  42% {
+    content: "Int";
+  }
+  44% {
+    content: "Inte";
+  }
+  46% {
+    content: "Inter";
+  }
+  48% {
+    content: "Intern";
+  }
+  50% {
+    content: "Interns";
+  }
+  52% {
+    content: "Internsh";
+  }
+  54% {
+    content: "Internshi";
+  }
+  56% {
+    content: "Internship";
+  }
+  58% {
+    content: "Internshi";
+  }
+  60% {
+    content: "Internsh";
+  }
+  61% {
+    content: "Interns";
+  }
+  62% {
+    content: "Intern";
+  }
+  63% {
+    content: "Inter";
+  }
+  64% {
+    content: "Inte";
+  }
+  65% {
+    content: "Int";
+  }
+  66% {
+    content: "In";
+  }
+  67% {
+    content: "I";
+  }
+  68% {
+    content: "";
+  }
+  70% {
+    content: "F";
+  }
+  72% {
+    content: "Fr";
+  }
+  74% {
+    content: "Fre";
+  }
+  76% {
+    content: "Free";
+  }
+  78% {
+    content: "Freel";
+  }
+  80% {
+    content: "Freela";
+  }
+  82% {
+    content: "Freelan";
+  }
+  84% {
+    content: "Freelanc";
+  }
+  86% {
+    content: "Freelance";
+  }
+  88% {
+    content: "Freelanc";
+  }
+  90% {
+    content: "Freelan";
+  }
+  92% {
+    content: "Freela";
+  }
+  94% {
+    content: "Freel";
+  }
+  96% {
+    content: "Free";
+  }
+  97% {
+    content: "Fre";
+  }
+  98% {
+    content: "Fr";
+  }
+  99% {
+    content: "F";
+  }
+  100% {
+    content: "";
+  }
+}
+
+@keyframes changeLetter {
+  0% {
+    content: "";
+  }
+  2% {
+    content: "P";
+  }
+  4% {
+    content: "Pa";
+  }
+  6% {
+    content: "Par";
+  }
+  8% {
+    content: "Part";
+  }
+  10% {
+    content: "Part-";
+  }
+  12% {
+    content: "Part-T";
+  }
+  14% {
+    content: "Part-Ti";
+  }
+  16% {
+    content: "Part-Tim";
+  }
+  18% {
+    content: "Part-Time";
+  }
+  20% {
+    content: "Part-Tim";
+  }
+  22% {
+    content: "Part-Ti";
+  }
+  24% {
+    content: "Part-T";
+  }
+  26% {
+    content: "Part-";
+  }
+  28% {
+    content: "Part";
+  }
+  30% {
+    content: "Par";
+  }
+  32% {
+    content: "Pa";
+  }
+  34% {
+    content: "P";
+  }
+  36% {
+    content: "";
+  }
+  38% {
+    content: "I";
+  }
+  40% {
+    content: "In";
+  }
+  42% {
+    content: "Int";
+  }
+  44% {
+    content: "Inte";
+  }
+  46% {
+    content: "Inter";
+  }
+  48% {
+    content: "Intern";
+  }
+  50% {
+    content: "Interns";
+  }
+  52% {
+    content: "Internsh";
+  }
+  54% {
+    content: "Internshi";
+  }
+  56% {
+    content: "Internship";
+  }
+  58% {
+    content: "Internshi";
+  }
+  60% {
+    content: "Internsh";
+  }
+  61% {
+    content: "Interns";
+  }
+  62% {
+    content: "Intern";
+  }
+  63% {
+    content: "Inter";
+  }
+  64% {
+    content: "Inte";
+  }
+  65% {
+    content: "Int";
+  }
+  66% {
+    content: "In";
+  }
+  67% {
+    content: "I";
+  }
+  68% {
+    content: "";
+  }
+  70% {
+    content: "F";
+  }
+  72% {
+    content: "Fr";
+  }
+  74% {
+    content: "Fre";
+  }
+  76% {
+    content: "Free";
+  }
+  78% {
+    content: "Freel";
+  }
+  80% {
+    content: "Freela";
+  }
+  82% {
+    content: "Freelan";
+  }
+  84% {
+    content: "Freelanc";
+  }
+  86% {
+    content: "Freelance";
+  }
+  88% {
+    content: "Freelanc";
+  }
+  90% {
+    content: "Freelan";
+  }
+  92% {
+    content: "Freela";
+  }
+  94% {
+    content: "Freel";
+  }
+  96% {
+    content: "Free";
+  }
+  97% {
+    content: "Fre";
+  }
+  98% {
+    content: "Fr";
+  }
+  99% {
+    content: "F";
+  }
+  100% {
+    content: "";
+  }
+}
+
+@-webkit-keyframes cursor {
+  0% {
+    content: "";
+  }
+  50% {
+    content: "|";
+  }
+  100% {
+    content: "";
+  }
+}
+
+@keyframes cursor {
+  0% {
+    content: "";
+  }
+  50% {
+    content: "|";
+  }
+  100% {
+    content: "";
+  }
+}
+
+.letter-changer::before {
+  -webkit-animation: changeLetter 20s linear 1s infinite normal forwards;
+          animation: changeLetter 20s linear 1s infinite normal forwards;
+  content: "";
+}
+
+.letter-changer::after {
+  -webkit-animation: cursor 0.6s linear 20.2s infinite normal forwards;
+          animation: cursor 0.6s linear 20.2s infinite normal forwards;
+  content: "|";
+}
+
+.accessibility {
+  width: 0;
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
 }
 /*# sourceMappingURL=style.css.map */

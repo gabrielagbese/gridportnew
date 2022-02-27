@@ -6,13 +6,16 @@ import "./styles/style.css"
 export default function Hero(props) {
     return(
         <div className="hero">
-            <h1 className="text-white">Gabriel Agbese</h1>
-            <h1 className="text-white"></h1>
-            <h2 className="text-white">Creative Frontend Developer.</h2>
-            <h4 className="text-white">Open to exploring part-time opportunities</h4>
+            <div className="name-container">
+                <p className="text-white name"><strong>Gabriel</strong></p>
+                <p className="text-white name"><strong>Agbese</strong></p>
+            </div>
+            <p className="text-white job-title"><strong>Creative Frontend Developer.</strong></p>
+            <p className="text-white sub-heading">Open to exploring <strong><span class="letter-changer"></span></strong><span class="accessibility"><s>Part-Time</s>Internship</span><br/> opportunities</p>
+            
             <div className="cta-container">
-                <Popbutton color = "green"/>
-                <Popbutton color = "orange"/>
+                <Popbutton color = "green" height = "3" width = "7" text = "Projects &#8599;"/>
+                <Popbutton color = "orange" height = "3" width = "7" text = "About &#8599;"/>
             </div>
         </div>
     )
