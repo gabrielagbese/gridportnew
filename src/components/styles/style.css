@@ -23,40 +23,73 @@ html, body {
           justify-content: center;
 }
 
-.container {
-  margin-top: 10vh;
-  width: 70vw;
-  height: 90vh;
-  border: solid thin red;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media (min-width: 0px) {
+  .container {
+    margin-top: 10vh;
+    width: 95vw;
+    height: 90vh;
+  }
+}
+
+@media (min-width: 720px) {
+  .container {
+    margin-top: 10vh;
+    width: 95vw;
+    height: 90vh;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+.hero {
+  border: thin solid red;
 }
 
 @media (min-width: 0px) {
   .hero {
-    margin-top: 10vh;
+    width: 100vw;
+    height: 40vh;
   }
 }
 
 @media (min-width: 720px) {
   .hero {
-    margin-top: 30vh;
-    padding-left: 1em;
+    height: 100vh;
+    padding-left: 2vw;
+    width: 45vw;
+  }
+}
+
+.text-wrapper {
+  border: thin solid blue;
+}
+
+@media (min-width: 0px) {
+  .text-wrapper {
+    height: auto;
   }
 }
 
 @media (min-width: 720px) {
-  .name-container {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
+  .text-wrapper {
+    height: auto;
+    position: absolute;
+    bottom: 5px;
+    margin-bottom: 10vh;
   }
 }
 
 @media (min-width: 0px) {
   .name {
-    font-size: 4rem;
+    font-size: 3.5rem;
     margin-top: 0.5em;
     padding-right: 1rem;
     margin-left: -0.1em;
@@ -65,7 +98,24 @@ html, body {
 
 @media (min-width: 720px) {
   .name {
-    font-size: 5rem;
+    font-size: 5vw;
+    padding-right: 1rem;
+    margin-left: -0.1em;
+  }
+}
+
+@media (min-width: 0px) {
+  .surname {
+    font-size: 4rem;
+    margin-top: 0.5em;
+    padding-right: 1rem;
+    margin-left: -0.1em;
+  }
+}
+
+@media (min-width: 720px) {
+  .surname {
+    font-size: 6vw;
     padding-right: 1rem;
     margin-left: -0.1em;
   }
@@ -82,8 +132,7 @@ html, body {
 
 @media (min-width: 720px) {
   .job-title {
-    font-size: 2.55rem;
-    padding-top: 0.75em;
+    font-size: 2.25vw;
     text-decoration: underline;
   }
 }
@@ -518,5 +567,23 @@ html, body {
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
+}
+
+.card-container {
+  border: thin solid yellow;
+}
+
+@media (min-width: 0px) {
+  .card-container {
+    width: 100vw;
+    height: 50vh;
+  }
+}
+
+@media (min-width: 720px) {
+  .card-container {
+    width: 50vw;
+    height: 100vh;
+  }
 }
 /*# sourceMappingURL=style.css.map */

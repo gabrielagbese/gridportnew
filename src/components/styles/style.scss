@@ -16,43 +16,82 @@ html, body {margin: 0; height: 100%; overflow: hidden; background-color: #000000
 }
 
 .container {
-    margin-top: 10vh;
-    width: 70vw;
-    height: 90vh;
-    border: solid thin red;
-    display: flex;
-}
-
-.hero{
+    
+    //border: thin solid green;
     @include xs{
         margin-top: 10vh;
+        width: 95vw;
+        height: 90vh;
     }
 
     @include md{
-        margin-top: 30vh;
-        padding-left: 1em;
+        margin-top: 10vh;
+        width: 95vw;
+        height: 90vh;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+.hero{
+    border: thin solid red;
+    @include xs{
+        width: 100vw;
+        height: 40vh;
+    }
+
+    @include md{
+        height: 100vh;
+        padding-left: 2vw;
+        width: 45vw;
     }
     
 }
 
-.name-container{
+.text-wrapper{
+    border: thin solid blue;
+    @include xs{
+        height: auto;
 
-    @include md{
-        display: flex;
     }
-
+    @include md{
+        height: auto;
+        position: absolute;
+        bottom: 5px;
+        margin-bottom: 10vh;
+    }
 }
+
+
 
 .name{
 
     @include xs{
+        
+        font-size: 3.5rem;
+        margin-top: 0.5em;
+        padding-right: 1rem;
+        margin-left: -0.1em;
+    }
+    @include md{
+        font-size: 5vw;
+        padding-right: 1rem;
+        margin-left: -0.1em;
+    }
+}
+
+.surname{
+
+    @include xs{
+        
         font-size: 4rem;
         margin-top: 0.5em;
         padding-right: 1rem;
         margin-left: -0.1em;
     }
     @include md{
-        font-size: 5rem;
+        font-size: 6vw;
         padding-right: 1rem;
         margin-left: -0.1em;
     }
@@ -67,8 +106,8 @@ html, body {margin: 0; height: 100%; overflow: hidden; background-color: #000000
         text-decoration: underline;
     }
     @include md{
-        font-size: 2.55rem;
-        padding-top: 0.75em;
+        font-size: 2.25vw;
+        //padding-top: 0.25em;
         text-decoration: underline;
     }
 }
@@ -184,3 +223,19 @@ html, body {margin: 0; height: 100%; overflow: hidden; background-color: #000000
     white-space:nowrap;
   }
 //animation end
+
+.card-container{
+    border: thin solid yellow;
+    @include xs{
+        width: 100vw;
+        height: 50vh;
+    }
+
+    @include md{
+        //padding-left: 2vw;
+        width: 50vw;
+        height: 100vh;
+        
+    }
+    
+}
