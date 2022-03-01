@@ -12,6 +12,8 @@ import Container from "./container"
 import "./layout.css"
 import "./styles/style.css"
 
+
+
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
