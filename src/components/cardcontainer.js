@@ -11,43 +11,41 @@ export default function CardContainer(params) {
     return(
         <div className="card-container">
             
-            <div class="card" id="card-3" >
-                <div className="head" onClick={() => {cardSelect(3)}}>card3</div>
-                <a  className="close" onClick={() => {cardSelect(3)}}>x button</a>
+            <div class="card" id="card-3" onClick={() => {cardSelect(3)}}>
             </div>
-            <div class="card" id="card-2">
-                <div className="head" onClick={() => {cardSelect(2)}}>card2</div>
-                <a  className="close" onClick={() => {cardSelect(2)}}>x button</a>
+            <div class="card" id="card-2" onClick={() => {cardSelect(2)}}>
             </div>
-            <div class="card" id="card-1">
-                <div className="head" onClick={() => {cardSelect(1)}}>card1</div>
-                <a  className="close" onClick={() => {cardSelect(1)}}>x button</a>
+            <div class="card" id="card-1" onClick={() => {cardSelect(1)}}>
             </div>
         </div>
     )
 }
 
 //animation for the cards
-var num = -25;
-var pos = num+'vh'
-var tl1 = new gsap.timeline();
-var tl2 = new gsap.timeline();
-var tl3 = new gsap.timeline();
+
+var tl1 =  gsap.timeline();
+var tl2 =  gsap.timeline();
+var tl3 =  gsap.timeline();
 
 const ani = (a) => {
     const id = "#card-"+ a;
     switch (a) {
         case 1:
-            tl1.to(id, { 
-                y: pos,
-            }); 
+            var num = -35;
+            var pos = num+'vh'
+            tl1.to("#card-1", { y: pos,}); 
+            tl2.to("#card-2", {y: -50,})
             return tl1
         case 2: 
+            var num = -25;
+            var pos = num+'vh'
             tl2.to(id, { 
                 y: pos,
             }); 
             return tl2
         case 3:
+            var num = -15;
+            var pos = num+'vh'
             case 2: 
             tl3.to(id, { 
                 y: pos,
@@ -60,9 +58,14 @@ const ani = (a) => {
 
 
 let isActivated = false;
+function reverseTimelines() {
+    tl1.reverse()
+    tl2.reverse()
+    tl3.reverse()
+}
 
 function cardSelect(b){
-    isActivated ? ani(b).reverse() : ani(b).play();
+    isActivated ? reverseTimelines() : ani(b).play();
     isActivated = !isActivated;
     
 }
