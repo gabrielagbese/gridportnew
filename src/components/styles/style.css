@@ -635,20 +635,20 @@ html, body {
   }
 }
 
-#card-3 {
+#card-1 {
   background-color: #00abc7;
   z-index: 3;
 }
 
 @media (min-width: 0px) {
-  #card-3 {
+  #card-1 {
     height: 90vh;
     margin-bottom: -70vh;
   }
 }
 
 @media (min-width: 720px) {
-  #card-3 {
+  #card-1 {
     height: 90vh;
     margin-bottom: -30vh;
   }
@@ -673,20 +673,20 @@ html, body {
   }
 }
 
-#card-1 {
+#card-3 {
   background-color: #fea521;
   z-index: 1;
 }
 
 @media (min-width: 0px) {
-  #card-1 {
+  #card-3 {
     height: 90vh;
     margin-bottom: -50vh;
   }
 }
 
 @media (min-width: 720px) {
-  #card-1 {
+  #card-3 {
     height: 90vh;
     margin-bottom: -10vh;
   }

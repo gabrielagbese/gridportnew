@@ -270,7 +270,7 @@ html, body {margin: 0; height: 100%; overflow: hidden; background-color: #000000
 
 }
 
-#card-3 {
+#card-1 {
     background-color: #00abc7;
     z-index: 3;
     @include xs{
@@ -301,7 +301,7 @@ html, body {margin: 0; height: 100%; overflow: hidden; background-color: #000000
         
     }
 }
-#card-1 {
+#card-3 {
     background-color: #fea521;
     z-index: 1;
     @include xs{
