@@ -23,49 +23,70 @@ export default function CardContainer(params) {
 
 //animation for the cards
 
+//activation state of selected card
+let isActivated = false;
+
+
+//individual timelines for each card
 var tl1 =  gsap.timeline();
 var tl2 =  gsap.timeline();
 var tl3 =  gsap.timeline();
 
-const ani = (a) => {
-    const id = "#card-"+ a;
-    switch (a) {
+//reversal of card activation animation 
+function reverseTimelines(tl) {
+    switch (tl) {
         case 1:
-            var num = -35;
-            var pos = num+'vh'
-            tl1.to("#card-1", { y: pos,}); 
-            tl2.to("#card-2", {y: -50,})
-            return tl1
-        case 2: 
-            var num = -25;
-            var pos = num+'vh'
-            tl2.to(id, { 
-                y: pos,
-            }); 
-            return tl2
+            tl1.reverse()
+            break;
+        case 2:
+            tl2.reverse()
+            break;
         case 3:
-            var num = -15;
-            var pos = num+'vh'
-            case 2: 
-            tl3.to(id, { 
-                y: pos,
-            }); 
-            return tl3
+            tl3.reverse()
+        break;
         default:
             break;
+    }
+}
+
+//card animation instructions
+const ani = (a) => {
+    if(isActivated == true){
+        reverseTimelines()
+        ani(a).play()
+    }else{
+        const id = "#card-"+ a;
+        switch (a) {
+            case 1:
+                var num = -35;
+                var pos = num+'vh'
+                tl1.to(id, { y: pos,}); 
+                return tl1
+            case 2: 
+                var num = -25;
+                var pos = num+'vh'
+                tl2.to("#card-1", {y: 150,})
+                tl2.to(id, { 
+                    y: pos,
+                });
+                return tl2
+            case 3:
+                var num = -15;
+                var pos = num+'vh'
+                case 2: 
+                tl3.to(id, { 
+                    y: pos,
+                }); 
+                return tl3
+            default:
+                break;
+        }
     }
 };
 
 
-let isActivated = false;
-function reverseTimelines() {
-    tl1.reverse()
-    tl2.reverse()
-    tl3.reverse()
-}
-
 function cardSelect(b){
-    isActivated ? reverseTimelines() : ani(b).play();
+    isActivated ? reverseTimelines(b) : ani(b).play();
     isActivated = !isActivated;
     
 }
