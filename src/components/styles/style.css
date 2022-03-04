@@ -630,65 +630,62 @@ html, body {
     position: absolute;
     bottom: 0;
     width: 45vw;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
   }
 }
 
 #card-1 {
   background-color: #00abc7;
+  height: 90vh;
   z-index: 3;
 }
 
 @media (min-width: 0px) {
   #card-1 {
-    height: 90vh;
     margin-bottom: -70vh;
   }
 }
 
 @media (min-width: 720px) {
   #card-1 {
-    height: 90vh;
-    margin-bottom: -30vh;
+    margin-bottom: -60vh;
   }
 }
 
 #card-2 {
   background-color: #63aa73;
+  height: 90vh;
   z-index: 2;
 }
 
 @media (min-width: 0px) {
   #card-2 {
-    height: 90vh;
     margin-bottom: -60vh;
   }
 }
 
 @media (min-width: 720px) {
   #card-2 {
-    height: 90vh;
-    margin-bottom: -20vh;
+    margin-bottom: -50vh;
   }
 }
 
 #card-3 {
   background-color: #fea521;
+  height: 90vh;
   z-index: 1;
 }
 
 @media (min-width: 0px) {
   #card-3 {
-    height: 90vh;
-    margin-bottom: -50vh;
+    margin-bottom: -40vh;
   }
 }
 
 @media (min-width: 720px) {
   #card-3 {
-    height: 90vh;
-    margin-bottom: -10vh;
+    margin-bottom: -20vh;
   }
 }
 /*# sourceMappingURL=style.css.map */

@@ -240,7 +240,6 @@ html, body {margin: 0; height: 100%; overflow: hidden; background-color: #000000
     }
 
     @include md{
-        //padding-left: 2vw;
         width: 50vw;
         height: 100vh;
         
@@ -263,8 +262,8 @@ html, body {margin: 0; height: 100%; overflow: hidden; background-color: #000000
         position: absolute;
         bottom: 0;
         width: 45vw;
-        border-top-left-radius: 20px;
-        border-top-right-radius: 20px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
         
     }
 
@@ -272,46 +271,43 @@ html, body {margin: 0; height: 100%; overflow: hidden; background-color: #000000
 
 #card-1 {
     background-color: #00abc7;
+    height: 90vh;
     z-index: 3;
     @include xs{
-        height: 90vh;
         margin-bottom: -70vh;
     }
 
     @include md{
         //padding-left: 2vw;
-        height: 90vh;
-        margin-bottom: -30vh;
+        margin-bottom: -60vh;
         
     }
     
 }
 #card-2 {
     background-color: #63aa73;
+    height: 90vh;
     z-index: 2;
     @include xs{
-        height: 90vh;
         margin-bottom: -60vh;
     }
 
     @include md{
         //padding-left: 2vw;
-        height: 90vh;
-        margin-bottom: -20vh;
+        margin-bottom: -50vh;
         
     }
 }
 #card-3 {
     background-color: #fea521;
+    height: 90vh;
     z-index: 1;
     @include xs{
-        height: 90vh;
-        margin-bottom: -50vh;
+        margin-bottom: -40vh;
     }
 
     @include md{
-        height: 90vh;
-        margin-bottom: -10vh;
+        margin-bottom: -20vh;
         
     }
 }
