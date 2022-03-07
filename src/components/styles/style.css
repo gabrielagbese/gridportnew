@@ -595,7 +595,7 @@ html, body {
 
 @media (min-width: 720px) {
   .card-container {
-    width: 50vw;
+    width: 55vw;
     height: 100vh;
   }
 }
@@ -623,7 +623,7 @@ html, body {
   .card {
     position: absolute;
     bottom: 0;
-    width: 50vw;
+    width: 53vw;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
   }
