@@ -35,8 +35,7 @@ html, body {margin: 0; height: 100%; overflow: hidden; background-color: #000000
 }
 
 .hero{
-    visibility: hidden;
-    border: thin solid red;
+    //border: thin solid red;
     display: flex;
     flex-direction: column;
     justify-content: end;
@@ -54,7 +53,7 @@ html, body {margin: 0; height: 100%; overflow: hidden; background-color: #000000
 }
 
 .text-wrapper{
-    border: thin solid blue;
+    //border: thin solid blue;
     @include xs{
         height: auto;
 
@@ -234,7 +233,7 @@ html, body {margin: 0; height: 100%; overflow: hidden; background-color: #000000
     align-items: center;
     //overflow-y: scroll;
 
-    border: thin solid yellow;
+    //border: thin solid yellow;
     @include xs{
         width: 95vw;
         height: 50vh;
@@ -254,7 +253,7 @@ html, body {margin: 0; height: 100%; overflow: hidden; background-color: #000000
     @include xs{
         position: absolute;
         bottom: 0;
-        width: 85vw;
+        width: 95vw;
         border-top-left-radius: 20px;
         border-top-right-radius: 20px;
     }
@@ -262,7 +261,7 @@ html, body {margin: 0; height: 100%; overflow: hidden; background-color: #000000
     @include md{
         position: absolute;
         bottom: 0;
-        width: 45vw;
+        width: 50vw;
         border-top-left-radius: 10px;
         border-top-right-radius: 10px;
         
@@ -311,4 +310,11 @@ html, body {margin: 0; height: 100%; overflow: hidden; background-color: #000000
         margin-bottom: -20vh;
         
     }
+}
+
+.close{
+    margin: 15px;
+    padding: 10px;
+    height: 30px;
+    background-color: pink;
 }
