@@ -131,3 +131,7 @@ function cardSelect(b){
     
 }
 
+//todo tomorrow
+//add content
+//change font
+
