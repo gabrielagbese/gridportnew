@@ -45,21 +45,21 @@ const ani = (a) => {
         //desktop screens
         switch (a) {
             case 1:
-                tl1.to("#card-1", { y: -60+'vh',}).timeScale(1.0); 
+                tl1.to("#card-1", { y: -70+'vh',}); 
                 return tl1
             case 2: 
                 tl2.to("#card-2", { 
-                    y: -50+'vh',
+                    y: -60+'vh',
                 });
-                tl2.to("#card-1", {y: 10+'vh',}).timeScale(1.0)
+                tl2.to("#card-1", {y: 10+'vh',})
                 return tl2
             case 3:
                 tl3.to("#card-2", { 
                     y:10+'vh',
                 });
-                tl3.to("#card-1", {y: 10+'vh',}).timeScale(1.0)
+                tl3.to("#card-1", {y: 10+'vh',})
                 tl3.to("#card-3", { 
-                    y: -20+'vh',
+                    y: -30+'vh',
                 });
                 return tl3
             default:
@@ -70,18 +70,18 @@ const ani = (a) => {
         //mobile screens
         switch (a) {
             case 1:
-                tl1.to("#card-1", { y: -70+'vh',}).timeScale(1.0); 
+                tl1.to("#card-1", { y: -70+'vh',}); 
                 return tl1
             case 2: 
                 tl2.to("#card-2", { 
                     y: -60+'vh',
                 });
-                tl2.to("#card-1", {y: 10+'vh',}).timeScale(1.0)
+                tl2.to("#card-1", {y: 10+'vh',})
                 return tl2
             case 3:
                 tl3.to("#card-3", { y: -40+'vh',});
                 tl3.to("#card-2", { y:10+'vh',});
-                tl3.to("#card-1", {y: 10+'vh',}).timeScale(1.0)
+                tl3.to("#card-1", {y: 10+'vh',})
                 return tl3
             default:
                 break;

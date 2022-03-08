@@ -1,3 +1,4 @@
+@import url("satoshi.css");
 html, body {
   margin: 0;
   height: 100%;
@@ -10,7 +11,7 @@ html, body {
 }
 
 .wrapper {
-  background-color: #000000;
+  background-color: #0b0b0C;
   background-image: linear-gradient(rgba(29, 29, 29, 0.8) 1.1px, transparent 1.1px), linear-gradient(to right, rgba(29, 29, 29, 0.8) 1.1px, #000000 1.1px);
   background-size: 19px 19px;
   width: 100vw;
@@ -60,6 +61,7 @@ html, body {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: end;
+  padding-left: 2vw;
 }
 
 @media (min-width: 0px) {
@@ -72,13 +74,13 @@ html, body {
 @media (min-width: 720px) {
   .hero {
     height: 90vh;
-    padding-left: 2vw;
     width: 45vw;
   }
 }
 
 @media (min-width: 0px) {
   .text-wrapper {
+    margin-top: -100px;
     height: auto;
   }
 }
@@ -89,57 +91,80 @@ html, body {
   }
 }
 
+.name {
+  font-weight: 700;
+}
+
 @media (min-width: 0px) {
   .name {
     font-size: 3.5rem;
     margin-top: 0.5em;
-    padding-right: 1rem;
+    letter-spacing: -3px;
+    padding-right: 1.5rem;
     margin-left: -0.1em;
   }
 }
 
 @media (min-width: 720px) {
   .name {
-    font-size: 5vw;
+    letter-spacing: -5px;
+    font-size: 5.5vw;
     padding-right: 1rem;
     margin-left: -0.1em;
   }
 }
 
+.surname {
+  font-weight: 800;
+  -webkit-text-stroke: 1px white;
+  color: black;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+}
+
 @media (min-width: 0px) {
   .surname {
+    letter-spacing: -3px;
     font-size: 4rem;
     margin-top: 0.5em;
-    padding-right: 1rem;
-    margin-left: -0.1em;
   }
 }
 
 @media (min-width: 720px) {
   .surname {
+    letter-spacing: -5px;
     font-size: 6vw;
-    padding-right: 1rem;
     margin-left: -0.1em;
   }
 }
 
+.job-title {
+  font-weight: 800;
+}
+
 @media (min-width: 0px) {
   .job-title {
-    font-size: 1.75rem;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
     padding-top: 0.75em;
     line-height: 1em;
-    text-decoration: underline;
   }
 }
 
 @media (min-width: 720px) {
   .job-title {
     font-size: 2.25vw;
-    text-decoration: underline;
   }
 }
 
+.stroke {
+  -webkit-text-stroke: 0.5px white;
+  color: black;
+}
+
 .sub-heading {
+  margin-top: -10px;
+  margin-bottom: 20px;
   font-size: 1.2rem;
 }
 
@@ -601,6 +626,8 @@ html, body {
 }
 
 .card {
+  -webkit-box-shadow: 0 0 18px rgba(0, 0, 0, 0.5);
+          box-shadow: 0 0 18px rgba(0, 0, 0, 0.5);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -624,8 +651,8 @@ html, body {
     position: absolute;
     bottom: 0;
     width: 53vw;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
   }
 }
 

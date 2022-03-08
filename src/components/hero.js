@@ -8,11 +8,11 @@ export default function Hero(props) {
         <div className="hero">
             <div className="text-wrapper">
                 <div className="name-container">
-                    <p className="text-white name"><strong>Gabriel</strong></p>
-                    <p className="text-white surname"><strong>Agbese.</strong></p>
+                    <p className="text-white name">Gabriel</p>
+                    <p className="text-white surname"><a className="stroke">Agbese.</a></p>
                 </div>
-                <p className="text-white job-title"><strong>Creative Frontend Developer</strong></p>
-                <p className="text-white sub-heading">Open to exploring <strong><span class="letter-changer"></span></strong><span class="accessibility"><s>Part-Time</s>Internship</span><br/> opportunities</p>
+                <p className="text-white job-title"><a className="stroke">Creative</a> Frontend Developer</p>
+                <p className="text-white sub-heading">Open to exploring <strong><span class="letter-changer"></span><span class="accessibility"><s>Part-Time</s>Internship</span></strong><br/> opportunities</p>
                 
                 {/* <div className="cta-container">
                     <Popbutton color = "green" height = "3" width = "7" text = "Projects &#8599;"/>
