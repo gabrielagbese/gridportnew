@@ -1,6 +1,7 @@
 import React from "react";
 import "./styles/style.css"
 import { gsap } from "gsap";
+import { FaTimes } from "react-icons/fa";
 
 
 export default function CardContainer(params) {
@@ -14,7 +15,7 @@ export default function CardContainer(params) {
                     <div onClick={() => {cardSelect(3)}}>
                         <p className="section-title">About</p>
                     </div>
-                    <p class="close" onClick={() => reverseTimelines(3)}>X</p>
+                    <p class="close" onClick={() => reverseTimelines(3)}><FaTimes /> </p>
                 </div>
                 <div className="content-body">
                     <p className="intro-text">I am an enthusiastic Front-End Web Developer who creates modern single-page web applications.</p>
@@ -26,7 +27,7 @@ export default function CardContainer(params) {
                     <div onClick={() => {cardSelect(2)}}>
                         <p className="section-title">Projects</p>
                     </div>
-                    <p class="close" onClick={() => reverseTimelines(2)}>X</p>
+                    <p className="close" onClick={() => reverseTimelines(2)} > <FaTimes /> </p>
                 </div>
                 <div className="content-body">
                     <p>lll</p>
@@ -37,7 +38,7 @@ export default function CardContainer(params) {
                     <div onClick={() => {cardSelect(1)}}>
                         <p className="section-title">Contact</p>
                     </div>
-                    <p class="close" onClick={() => reverseTimelines(1)}>X</p>
+                    <p class="close" onClick={() => reverseTimelines(1)}><FaTimes /> </p>
                 </div>
                 <div className="content-body">
                     <p>lll</p>
