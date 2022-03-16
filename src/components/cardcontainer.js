@@ -10,20 +10,37 @@ export default function CardContainer(params) {
         <div className="card-container">
             
             <div className="card" id="card-3" >
-                <div onClick={() => {cardSelect(3)}}>card 3</div>
+                <div onClick={() => {cardSelect(3)}}>
+                    <p className="section-title">About</p>
+                </div>
                 <p class="close" onClick={() => reverseTimelines(3)}>XX</p>
             </div>
             <div className="card" id="card-2">
-            <div onClick={() => {cardSelect(2)}}>card 2</div>
+                <div onClick={() => {cardSelect(2)}}>
+                    <p className="section-title">Projects</p>
+                </div>
                 <p class="close" onClick={() => reverseTimelines(2)}>XX</p>
             </div>
             <div className="card" id="card-1">
-            <div onClick={() => {cardSelect(1)}}>card 1</div>
+                <div onClick={() => {cardSelect(1)}}>
+                    <p className="section-title">Contact</p>
+                </div>
                 <p class="close" onClick={() => reverseTimelines(1)}>XX</p>
             </div>
         </div>
     )
 }
+
+//paper texture svg
+<svg>
+    <filter id='roughpaper'>
+        <feTurbulence type="fractalNoise" baseFrequency='0.04' result='noise' numOctaves="5" />
+
+        <feDiffuseLighting in='noise' lighting-color='#fff' surfaceScale='2'>
+            <feDistantLight azimuth='45' elevation='60' />
+        </feDiffuseLighting>
+    </filter>
+</svg>
 
 //animation for the cards
 
@@ -59,7 +76,7 @@ const ani = (a) => {
                 });
                 tl3.to("#card-1", {y: 10+'vh',})
                 tl3.to("#card-3", { 
-                    y: -30+'vh',
+                    y: -25+'vh',
                 });
                 return tl3
             default:
@@ -79,9 +96,9 @@ const ani = (a) => {
                 tl2.to("#card-1", {y: 10+'vh',})
                 return tl2
             case 3:
-                tl3.to("#card-3", { y: -40+'vh',});
                 tl3.to("#card-2", { y:10+'vh',});
                 tl3.to("#card-1", {y: 10+'vh',})
+                tl3.to("#card-3", { y: -35+'vh',});
                 return tl3
             default:
                 break;

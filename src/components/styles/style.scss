@@ -3,17 +3,41 @@
 
 
 html, body {margin: 0; height: 100%; overflow: hidden; background-color: #000000;}
+u{
+    text-decoration-color: #000;
+}
 .text-white{
-    color: white;
+    @include xs{
+        color: white;
+    }
+    @include md{
+        color: black;
+        text-decoration-color: #000000;
+    }
+    
+    
 }
 .wrapper{
+    
     background-color: #0b0b0C;
-    background-image:  linear-gradient( rgba(29,29,29,0.8) 1.1px, transparent 1.1px), linear-gradient(to right, rgba(29,29,29,0.8) 1.1px, #000000 1.1px,);
-    background-size: 19px 19px;
+    //background-image:  linear-gradient( rgba(29,29,29,0.8) 1.1px, transparent 1.1px), linear-gradient(to right, rgba(29,29,29,0.8) 1.1px, #000000 1.1px,);
+    //background-color:#161616; 
+    background-image: linear-gradient(rgba(255, 255, 255, 0.1) 2px, transparent 2px),linear-gradient(90deg, rgba(255, 255, 255, 0.1) 2px, transparent 2px),linear-gradient(rgba(255,255,255,.15) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,.15) 1px, transparent 1px);
+    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+    background-position: center;
+    //background-size: 19px 19px;
+    //opacity: 0.7;
     width: 100vw;
     height: 100vh;
     display: flex;
     justify-content: center;
+    @include xs{
+        background-color:#131212;
+    };
+    @include md{
+        background-color:#131212;
+        box-shadow: inset 10px 10px 15px rgba(0,0,0,0.75);
+    };
 }
 
 .container {
@@ -26,9 +50,10 @@ html, body {margin: 0; height: 100%; overflow: hidden; background-color: #000000
     }
 
     @include md{
-        margin-top: 10vh;
-        width: 95vw;
-        height: 90vh;
+        //margin-top: 10vh;
+        margin: 0;
+        width: 100vw;
+        height: 100vh;
         display: flex;
         flex-direction: row;
         justify-content: space-between;
@@ -41,22 +66,29 @@ html, body {margin: 0; height: 100%; overflow: hidden; background-color: #000000
     flex-direction: column;
     justify-content: end;
     padding-left: 2vw;
+    
     @include xs{
         width: 95vw;
         height: 40vh;
     }
 
     @include md{
-        height: 90vh;
-        width: 45vw;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        box-shadow: 15px 0px 15px -2px rgba(0,0,0,0.95);
+        background-color: #F0E9E1;
+        //background-image: url(../../images/cork-text.png);
+        height: 100vh;
+        width: 35vw;
+        //padding-top: -10vh;
     }
     
 }
 
 .text-wrapper{
+    padding-bottom: 7.5vh;
     
-    
-    //border: thin solid blue;
+    //border: thin solid palevioletred;
     @include xs{
         margin-top: -100px;
         height: auto;
@@ -72,6 +104,7 @@ html, body {margin: 0; height: 100%; overflow: hidden; background-color: #000000
 
 .name{
     font-weight: 700;
+    //-webkit-text-stroke: 1px white;
 
     @include xs{
         
@@ -83,7 +116,7 @@ html, body {margin: 0; height: 100%; overflow: hidden; background-color: #000000
     }
     @include md{
         letter-spacing: -5px;
-        font-size: 5.5vw;
+        font-size: 6vw;
         padding-right: 1rem;
         margin-left: -0.1em;
     }
@@ -93,18 +126,22 @@ html, body {margin: 0; height: 100%; overflow: hidden; background-color: #000000
 
     //padding-left: 1rem;
     font-weight: 800;
-    -webkit-text-stroke: 1px white;
+    -webkit-text-stroke: 0.75px white;
     color: black;
-    text-decoration-line: underline;
+    
+    
 
     @include xs{
+        //text-decoration-line: underline;
         letter-spacing: -3px;
         font-size: 4rem;
         margin-top: 0.5em;
     }
     @include md{
-        letter-spacing: -5px;
-        font-size: 6vw;
+        //text-decoration-line: underline;
+        //text-decoration-color: #000000;
+        letter-spacing: -3px;
+        font-size: 5.5vw;
         margin-left: -0.1em;
     }
 }
@@ -126,8 +163,10 @@ html, body {margin: 0; height: 100%; overflow: hidden; background-color: #000000
     }
 }
 
+
+
 .stroke {
-    -webkit-text-stroke: 0.5px white;
+    //-webkit-text-stroke: 0.5px white;
     color: black;
 }
 
@@ -260,7 +299,8 @@ html, body {margin: 0; height: 100%; overflow: hidden; background-color: #000000
     }
 
     @include md{
-        width: 55vw;
+        margin-top: 10vh;
+        width: 65vw;
         height: 100vh;
         
     }
@@ -268,7 +308,7 @@ html, body {margin: 0; height: 100%; overflow: hidden; background-color: #000000
 }
 
 .card {
-    box-shadow: 0 0 18px rgba(0,0,0,0.5);
+    
     display: flex;
     justify-content: space-between;
     @include xs{
@@ -282,16 +322,19 @@ html, body {margin: 0; height: 100%; overflow: hidden; background-color: #000000
     @include md{
         position: absolute;
         bottom: 0;
-        width: 53vw;
-        border-top-left-radius: 15px;
-        border-top-right-radius: 15px;
+        width: 60vw;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
         
     }
 
 }
 
 #card-1 {
-    background-color: #00abc7;
+    box-shadow: 0 0 20px rgba(0,0,0,0.8);
+    background-color: #4b7ccf;
+    background-image: url(../../images/cork-text.png);
+    background-repeat: repeat;
     height: 90vh;
     z-index: 3;
     @include xs{
@@ -305,8 +348,12 @@ html, body {margin: 0; height: 100%; overflow: hidden; background-color: #000000
     }
     
 }
+
 #card-2 {
-    background-color: #63aa73;
+    box-shadow: 0 0 20px rgba(0,0,0,0.8);
+    background-color: #54B574;
+    background-image: url(../../images/cork-text.png);
+    background-repeat: repeat;
     height: 90vh;
     z-index: 2;
     @include xs{
@@ -320,15 +367,17 @@ html, body {margin: 0; height: 100%; overflow: hidden; background-color: #000000
     }
 }
 #card-3 {
-    background-color: #fea521;
+    background-color: #EE4C2E;
+    background-image: url(../../images/cork-text.png);
+    background-repeat: repeat;
     height: 90vh;
     z-index: 1;
     @include xs{
-        margin-bottom: -40vh;
+        margin-bottom: -35vh;
     }
 
     @include md{
-        margin-bottom: -20vh;
+        margin-bottom: -15vh;
         
     }
 }
@@ -337,5 +386,13 @@ html, body {margin: 0; height: 100%; overflow: hidden; background-color: #000000
     margin: 15px;
     padding: 10px;
     height: 30px;
-    background-color: pink;
+    //background-color: pink;
+}
+
+.section-title{
+    font-weight: 700;
+    padding-left: 15px;
+    padding-top: 20px;
+    color: #000;
+    font-size: 3.5rem;
 }

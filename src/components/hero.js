@@ -9,9 +9,9 @@ export default function Hero(props) {
             <div className="text-wrapper">
                 <div className="name-container">
                     <p className="text-white name">Gabriel</p>
-                    <p className="text-white surname"><a className="stroke">Agbese.</a></p>
+                    <p className="text-white surname"><u className="stroke">Agbese.</u></p>
                 </div>
-                <p className="text-white job-title"><a className="stroke">Creative</a> Frontend Developer</p>
+                <p className="text-white job-title"> Frontend Developer</p>
                 <p className="text-white sub-heading">Open to exploring <strong><span class="letter-changer"></span><span class="accessibility"><s>Part-Time</s>Internship</span></strong><br/> opportunities</p>
                 
                 {/* <div className="cta-container">
@@ -23,3 +23,4 @@ export default function Hero(props) {
         </div>
     )
 }
+/*<a className="stroke">Creative</a>*/

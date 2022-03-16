@@ -6,14 +6,30 @@ html, body {
   background-color: #000000;
 }
 
-.text-white {
-  color: white;
+u {
+  -webkit-text-decoration-color: #000;
+          text-decoration-color: #000;
+}
+
+@media (min-width: 0px) {
+  .text-white {
+    color: white;
+  }
+}
+
+@media (min-width: 720px) {
+  .text-white {
+    color: black;
+    -webkit-text-decoration-color: #000000;
+            text-decoration-color: #000000;
+  }
 }
 
 .wrapper {
   background-color: #0b0b0C;
-  background-image: linear-gradient(rgba(29, 29, 29, 0.8) 1.1px, transparent 1.1px), linear-gradient(to right, rgba(29, 29, 29, 0.8) 1.1px, #000000 1.1px);
-  background-size: 19px 19px;
+  background-image: linear-gradient(rgba(255, 255, 255, 0.1) 2px, transparent 2px), linear-gradient(90deg, rgba(255, 255, 255, 0.1) 2px, transparent 2px), linear-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.15) 1px, transparent 1px);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  background-position: center;
   width: 100vw;
   height: 100vh;
   display: -webkit-box;
@@ -22,6 +38,20 @@ html, body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media (min-width: 0px) {
+  .wrapper {
+    background-color: #131212;
+  }
+}
+
+@media (min-width: 720px) {
+  .wrapper {
+    background-color: #131212;
+    -webkit-box-shadow: inset 10px 10px 15px rgba(0, 0, 0, 0.75);
+            box-shadow: inset 10px 10px 15px rgba(0, 0, 0, 0.75);
+  }
 }
 
 @media (min-width: 0px) {
@@ -34,9 +64,9 @@ html, body {
 
 @media (min-width: 720px) {
   .container {
-    margin-top: 10vh;
-    width: 95vw;
-    height: 90vh;
+    margin: 0;
+    width: 100vw;
+    height: 100vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -73,9 +103,18 @@ html, body {
 
 @media (min-width: 720px) {
   .hero {
-    height: 90vh;
-    width: 45vw;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    -webkit-box-shadow: 15px 0px 15px -2px rgba(0, 0, 0, 0.95);
+            box-shadow: 15px 0px 15px -2px rgba(0, 0, 0, 0.95);
+    background-color: #F0E9E1;
+    height: 100vh;
+    width: 35vw;
   }
+}
+
+.text-wrapper {
+  padding-bottom: 7.5vh;
 }
 
 @media (min-width: 0px) {
@@ -108,7 +147,7 @@ html, body {
 @media (min-width: 720px) {
   .name {
     letter-spacing: -5px;
-    font-size: 5.5vw;
+    font-size: 6vw;
     padding-right: 1rem;
     margin-left: -0.1em;
   }
@@ -116,10 +155,8 @@ html, body {
 
 .surname {
   font-weight: 800;
-  -webkit-text-stroke: 1px white;
+  -webkit-text-stroke: 0.75px white;
   color: black;
-  -webkit-text-decoration-line: underline;
-          text-decoration-line: underline;
 }
 
 @media (min-width: 0px) {
@@ -132,8 +169,8 @@ html, body {
 
 @media (min-width: 720px) {
   .surname {
-    letter-spacing: -5px;
-    font-size: 6vw;
+    letter-spacing: -3px;
+    font-size: 5.5vw;
     margin-left: -0.1em;
   }
 }
@@ -158,7 +195,6 @@ html, body {
 }
 
 .stroke {
-  -webkit-text-stroke: 0.5px white;
   color: black;
 }
 
@@ -620,14 +656,13 @@ html, body {
 
 @media (min-width: 720px) {
   .card-container {
-    width: 55vw;
+    margin-top: 10vh;
+    width: 65vw;
     height: 100vh;
   }
 }
 
 .card {
-  -webkit-box-shadow: 0 0 18px rgba(0, 0, 0, 0.5);
-          box-shadow: 0 0 18px rgba(0, 0, 0, 0.5);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -650,14 +685,18 @@ html, body {
   .card {
     position: absolute;
     bottom: 0;
-    width: 53vw;
-    border-top-left-radius: 15px;
-    border-top-right-radius: 15px;
+    width: 60vw;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
   }
 }
 
 #card-1 {
-  background-color: #00abc7;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  background-color: #4b7ccf;
+  background-image: url(../../images/cork-text.png);
+  background-repeat: repeat;
   height: 90vh;
   z-index: 3;
 }
@@ -675,7 +714,11 @@ html, body {
 }
 
 #card-2 {
-  background-color: #63aa73;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.8);
+  background-color: #54B574;
+  background-image: url(../../images/cork-text.png);
+  background-repeat: repeat;
   height: 90vh;
   z-index: 2;
 }
@@ -693,20 +736,22 @@ html, body {
 }
 
 #card-3 {
-  background-color: #fea521;
+  background-color: #EE4C2E;
+  background-image: url(../../images/cork-text.png);
+  background-repeat: repeat;
   height: 90vh;
   z-index: 1;
 }
 
 @media (min-width: 0px) {
   #card-3 {
-    margin-bottom: -40vh;
+    margin-bottom: -35vh;
   }
 }
 
 @media (min-width: 720px) {
   #card-3 {
-    margin-bottom: -20vh;
+    margin-bottom: -15vh;
   }
 }
 
@@ -714,6 +759,13 @@ html, body {
   margin: 15px;
   padding: 10px;
   height: 30px;
-  background-color: pink;
+}
+
+.section-title {
+  font-weight: 700;
+  padding-left: 15px;
+  padding-top: 20px;
+  color: #000;
+  font-size: 3.5rem;
 }
 /*# sourceMappingURL=style.css.map */
