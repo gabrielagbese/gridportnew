@@ -2,7 +2,8 @@
 @import url('satoshi.css');
 
 
-html, body {margin: 0; height: 100%; overflow: hidden; background-color: #000000;}
+html, body {margin: 0; height: 100%; overflow: hidden;scrollbar-width: 0; background-color: #000000;}
+
 u{
     //text-decoration-color: #000;
     @include xs{
@@ -24,8 +25,9 @@ u{
     
 }
 .wrapper{
-    
-    background-color: #0b0b0C;
+    overflow: hidden;
+    scrollbar-width: 0;
+    //background-color: #0b0b0C;
     //background-image:  linear-gradient( rgba(29,29,29,0.8) 1.1px, transparent 1.1px), linear-gradient(to right, rgba(29,29,29,0.8) 1.1px, #000000 1.1px,);
     //background-color:#161616; 
     background-image: linear-gradient(rgba(255, 255, 255, 0.1) 2px, transparent 2px),linear-gradient(90deg, rgba(255, 255, 255, 0.1) 2px, transparent 2px),linear-gradient(rgba(255,255,255,.15) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,.15) 1px, transparent 1px);
@@ -47,7 +49,8 @@ u{
 }
 
 .container {
-    
+    scrollbar-width: 0;
+    overflow: hidden;
     //border: thin solid green;
     @include xs{
         margin-top: 10vh;
@@ -297,6 +300,8 @@ u{
     flex-direction: column;
     align-items: center;
     //overflow-y: scroll;
+    scrollbar-width: 0;
+    overflow: hidden;
 
     //border: thin solid yellow;
     @include xs{
@@ -391,6 +396,7 @@ u{
     margin: 15px;
     padding: 10px;
     height: 30px;
+    cursor: pointer;
     //background-color: pink;
 }
 
@@ -398,14 +404,18 @@ u{
     font-weight: 700;
     padding-left: 15px;
     padding-top: 20px;
+    padding-right: 10px;
     color: #000;
     font-size: 3.5rem;
+    border-right: 1px dashed rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    
 }
 
 .content-header{
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px dashed rgba(0, 0, 0, 0.15);
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.12);
 }
 
 .content-body{
@@ -413,8 +423,9 @@ u{
 }
 
 .intro-text{
+    font-weight: 500;
     @include xs{
-        font-size: 1.4rem;
+        font-size: 1.2rem;
     }
     @include md{
         padding-top: 2vh;
@@ -431,3 +442,22 @@ u{
         font-size: 1.2rem;
     }
 }
+
+.cv-button{
+    border: 2px solid black;
+    background-color: rgba(214, 210, 210, 0.1);
+    border-radius: 5px;
+    color: black;
+    padding: 7px 14px;
+    font-size: 16px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.cv-button:hover {
+    background: #e7e7e767;
+  }
+
+  .cv-button:active{
+    background: #4e4e4e67;
+  }

@@ -14,11 +14,11 @@ export default function CardContainer(params) {
                     <div onClick={() => {cardSelect(3)}}>
                         <p className="section-title">About</p>
                     </div>
-                    <p class="close" onClick={() => reverseTimelines(3)}>XX</p>
+                    <p class="close" onClick={() => reverseTimelines(3)}>X</p>
                 </div>
                 <div className="content-body">
-                    <p className="intro-text"><strong>I am an enthusiastic Front-End Web Developer who creates modern single-page web applications.</strong></p>
-
+                    <p className="intro-text">I am an enthusiastic Front-End Web Developer who creates modern single-page web applications.</p>
+                    <button className="cv-button">Download CV</button>
                 </div>
             </div>
             <div className="card" id="card-2" >
@@ -26,7 +26,7 @@ export default function CardContainer(params) {
                     <div onClick={() => {cardSelect(2)}}>
                         <p className="section-title">Projects</p>
                     </div>
-                    <p class="close" onClick={() => reverseTimelines(2)}>XX</p>
+                    <p class="close" onClick={() => reverseTimelines(2)}>X</p>
                 </div>
                 <div className="content-body">
                     <p>lll</p>
@@ -37,7 +37,7 @@ export default function CardContainer(params) {
                     <div onClick={() => {cardSelect(1)}}>
                         <p className="section-title">Contact</p>
                     </div>
-                    <p class="close" onClick={() => reverseTimelines(1)}>XX</p>
+                    <p class="close" onClick={() => reverseTimelines(1)}>X</p>
                 </div>
                 <div className="content-body">
                     <p>lll</p>
