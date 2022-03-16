@@ -2,6 +2,8 @@ import React from "react";
 import "./styles/style.css"
 import { gsap } from "gsap";
 import { FaTimes } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 
 
 export default function CardContainer(params) {
@@ -41,7 +43,10 @@ export default function CardContainer(params) {
                     <p class="close" onClick={() => reverseTimelines(1)}><FaTimes /> </p>
                 </div>
                 <div className="content-body">
-                    <p>lll</p>
+                    <div className="icon-tray">
+                        <FaGithub />
+                        <FaLinkedin />
+                    </div>
                 </div>
             </div>
         </div>

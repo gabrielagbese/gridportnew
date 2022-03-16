@@ -220,37 +220,6 @@ html, body {
   font-size: 1.2rem;
 }
 
-.box-button {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-right: 0.5rem;
-}
-
-.box {
-  min-width: 5em;
-  min-height: 2.5em;
-}
-
-.box.colored {
-  border: solid thin orange;
-  margin-bottom: -2.75em;
-}
-
-.box.white {
-  background-color: black;
-  border: solid thin white;
-  z-index: 2;
-  margin-left: 0.5em;
-}
-
 .cta-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -662,7 +631,7 @@ html, body {
       -ms-flex-align: center;
           align-items: center;
   scrollbar-width: 0;
-  overflow: hidden;
+  z-index: 1;
 }
 
 @media (min-width: 0px) {
@@ -707,7 +676,7 @@ html, body {
   background-image: url(../../images/cork-text.png);
   background-repeat: repeat;
   height: 90vh;
-  z-index: 3;
+  z-index: 4;
 }
 
 @media (min-width: 0px) {
@@ -729,7 +698,7 @@ html, body {
   background-image: url(../../images/cork-text.png);
   background-repeat: repeat;
   height: 90vh;
-  z-index: 2;
+  z-index: 3;
 }
 
 @media (min-width: 0px) {
@@ -749,7 +718,7 @@ html, body {
   background-image: url(../../images/cork-text.png);
   background-repeat: repeat;
   height: 90vh;
-  z-index: 1;
+  z-index: 2;
 }
 
 @media (min-width: 0px) {
@@ -844,5 +813,20 @@ html, body {
 
 .cv-button:active {
   background: #4e4e4e67;
+}
+
+.icon-tray {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+  padding-right: 10px;
+}
+
+.icon-tray > * {
+  font-size: 3em;
+  padding-left: 5px;
 }
 /*# sourceMappingURL=style.css.map */
