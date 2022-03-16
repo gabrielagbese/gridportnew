@@ -10,22 +10,38 @@ export default function CardContainer(params) {
         <div className="card-container">
             
             <div className="card" id="card-3" >
-                <div onClick={() => {cardSelect(3)}}>
-                    <p className="section-title">About</p>
+                <div className="content-header">
+                    <div onClick={() => {cardSelect(3)}}>
+                        <p className="section-title">About</p>
+                    </div>
+                    <p class="close" onClick={() => reverseTimelines(3)}>XX</p>
                 </div>
-                <p class="close" onClick={() => reverseTimelines(3)}>XX</p>
+                <div className="content-body">
+                    <p className="intro-text"><strong>I am an enthusiastic Front-End Web Developer who creates modern single-page web applications.</strong></p>
+
+                </div>
             </div>
-            <div className="card" id="card-2">
-                <div onClick={() => {cardSelect(2)}}>
-                    <p className="section-title">Projects</p>
+            <div className="card" id="card-2" >
+                <div className="content-header">
+                    <div onClick={() => {cardSelect(2)}}>
+                        <p className="section-title">Projects</p>
+                    </div>
+                    <p class="close" onClick={() => reverseTimelines(2)}>XX</p>
                 </div>
-                <p class="close" onClick={() => reverseTimelines(2)}>XX</p>
+                <div className="content-body">
+                    <p>lll</p>
+                </div>
             </div>
-            <div className="card" id="card-1">
-                <div onClick={() => {cardSelect(1)}}>
-                    <p className="section-title">Contact</p>
+            <div className="card" id="card-1" >
+                <div className="content-header">
+                    <div onClick={() => {cardSelect(1)}}>
+                        <p className="section-title">Contact</p>
+                    </div>
+                    <p class="close" onClick={() => reverseTimelines(1)}>XX</p>
                 </div>
-                <p class="close" onClick={() => reverseTimelines(1)}>XX</p>
+                <div className="content-body">
+                    <p>lll</p>
+                </div>
             </div>
         </div>
     )

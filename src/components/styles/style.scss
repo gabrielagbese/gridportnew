@@ -4,7 +4,13 @@
 
 html, body {margin: 0; height: 100%; overflow: hidden; background-color: #000000;}
 u{
-    text-decoration-color: #000;
+    //text-decoration-color: #000;
+    @include xs{
+        text-decoration-color: #fff;
+    }
+    @include md{
+        text-decoration-color: #000;
+    }
 }
 .text-white{
     @include xs{
@@ -309,8 +315,7 @@ u{
 
 .card {
     
-    display: flex;
-    justify-content: space-between;
+    
     @include xs{
         position: absolute;
         bottom: 0;
@@ -395,4 +400,34 @@ u{
     padding-top: 20px;
     color: #000;
     font-size: 3.5rem;
+}
+
+.content-header{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.15);
+}
+
+.content-body{
+    padding: 15px;
+}
+
+.intro-text{
+    @include xs{
+        font-size: 1.4rem;
+    }
+    @include md{
+        padding-top: 2vh;
+        font-size: 1.9rem;
+        line-height: 3.75vh;
+    } 
+}
+.content-text{
+    
+    @include xs{
+        font-size: 1.2rem;
+    }
+    @include md{
+        font-size: 1.2rem;
+    }
 }
