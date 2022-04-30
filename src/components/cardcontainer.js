@@ -4,6 +4,8 @@ import { gsap } from "gsap";
 import { FaTimes } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
+import { FaExpandAlt } from "react-icons/fa";
+import { FaInstagram } from "react-icons/fa";
 
 
 export default function CardContainer(params) {
@@ -15,7 +17,7 @@ export default function CardContainer(params) {
             <div className="card" id="card-3" >
                 <div className="content-header">
                     <div onClick={() => {cardSelect(3)}}>
-                        <p className="section-title">About</p>
+                        <p className="section-title">About <span className="expand"><FaExpandAlt /></span></p>
                     </div>
                     <p class="close" onClick={() => reverseTimelines(3)}><FaTimes /> </p>
                 </div>
@@ -27,7 +29,7 @@ export default function CardContainer(params) {
             <div className="card" id="card-2" >
                 <div className="content-header">
                     <div onClick={() => {cardSelect(2)}}>
-                        <p className="section-title">Projects</p>
+                        <p className="section-title">Projects <span className="expand"><FaExpandAlt /></span></p>
                     </div>
                     <p className="close" onClick={() => reverseTimelines(2)} > <FaTimes /> </p>
                 </div>
@@ -38,7 +40,7 @@ export default function CardContainer(params) {
             <div className="card" id="card-1" >
                 <div className="content-header">
                     <div onClick={() => {cardSelect(1)}}>
-                        <p className="section-title">Contact</p>
+                        <p className="section-title">Contact <span className="expand"><FaExpandAlt /></span></p>
                     </div>
                     <p class="close" onClick={() => reverseTimelines(1)}><FaTimes /> </p>
                 </div>
@@ -46,6 +48,7 @@ export default function CardContainer(params) {
                     <div className="icon-tray">
                         <FaGithub />
                         <FaLinkedin />
+                        <FaInstagram />
                     </div>
                 </div>
             </div>

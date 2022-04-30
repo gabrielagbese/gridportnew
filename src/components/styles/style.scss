@@ -10,7 +10,7 @@ u{
         text-decoration-color: #fff;
     }
     @include md{
-        text-decoration-color: #000;
+        text-decoration-color: #fff;
     }
 }
 .text-white{
@@ -18,7 +18,7 @@ u{
         color: white;
     }
     @include md{
-        color: black;
+        color: white;
         text-decoration-color: #000000;
     }
     
@@ -30,7 +30,7 @@ u{
     //background-color: #0b0b0C;
     //background-image:  linear-gradient( rgba(29,29,29,0.8) 1.1px, transparent 1.1px), linear-gradient(to right, rgba(29,29,29,0.8) 1.1px, #000000 1.1px,);
     //background-color:#161616; 
-    background-image: linear-gradient(rgba(255, 255, 255, 0.1) 2px, transparent 2px),linear-gradient(90deg, rgba(255, 255, 255, 0.1) 2px, transparent 2px),linear-gradient(rgba(255,255,255,.15) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,.15) 1px, transparent 1px);
+    background-image: linear-gradient(rgba(255, 255, 255, 0.05) 2px, transparent 2px),linear-gradient(90deg, rgba(255, 255, 255, 0.05) 2px, transparent 2px),linear-gradient(rgba(255,255,255,.075) 1px, transparent 1px),linear-gradient(90deg, rgba(255,255,255,.075) 1px, transparent 1px);
     background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
     background-position: center;
     //background-size: 19px 19px;
@@ -43,18 +43,19 @@ u{
         background-color:#131212;
     };
     @include md{
-        background-color:#131212;
-        box-shadow: inset 10px 10px 15px rgba(0,0,0,0.75);
+        background-color:rgb(13, 13, 13);
+        box-shadow: inset 0 7px 9px 7px rgba(0,0,0,0.4);
     };
 }
 
 .container {
-    scrollbar-width: 0;
+    //scrollbar-width: 0;
     overflow: hidden;
+    align-items: center;
     //border: thin solid green;
     @include xs{
         margin-top: 10vh;
-        width: 95vw;
+        width: 100vw;
         height: 90vh;
     }
 
@@ -72,6 +73,7 @@ u{
 .hero{
     //border: thin solid red;
     display: flex;
+    //background-color: rgb(116, 105, 105);
     flex-direction: column;
     justify-content: end;
     padding-left: 2vw;
@@ -80,23 +82,26 @@ u{
     @include xs{
         width: 95vw;
         height: 40vh;
+        padding-left: 5vw; 
     }
 
     @include md{
-        border-top-left-radius: 10px;
-        border-bottom-left-radius: 10px;
-        box-shadow: 15px 0px 15px -2px rgba(0,0,0,0.95);
-        background-color: #F0E9E1;
+        //border-top-right-radius: 10px;
+        //border-bottom-right-radius: 10px;
+        box-shadow: 15px 0px 15px -2px rgba(0,0,0,0.30);
+        background-color: #0c0b0b;
         //background-image: url(../../images/cork-text.png);
         height: 100vh;
-        width: 35vw;
+        width: 30vw;
         //padding-top: -10vh;
     }
     
 }
 
+
 .text-wrapper{
-    padding-bottom: 7.5vh;
+    padding-bottom: 10vh;
+
     
     //border: thin solid palevioletred;
     @include xs{
@@ -107,6 +112,7 @@ u{
     }
     @include md{
         height: auto;
+        //visibility: hidden;
     }
 }
 
@@ -114,6 +120,7 @@ u{
 
 .name{
     font-weight: 700;
+    color: white;
     //-webkit-text-stroke: 1px white;
 
     @include xs{
@@ -190,6 +197,8 @@ u{
 .cta-container{
     display: flex;
 }
+
+/*
 
 //animation
 @keyframes changeLetter {
@@ -272,7 +281,7 @@ u{
     white-space:nowrap;
   }
 //animation end
-
+*/
 .card-container{
     position: relative;
     height: 90vh;
@@ -286,13 +295,13 @@ u{
 
     //border: thin solid yellow;
     @include xs{
-        width: 95vw;
+        width: 100vw;
         height: 50vh;
     }
 
     @include md{
-        margin-top: 10vh;
-        width: 65vw;
+        margin-top: 16vh;
+        width: 70vw;
         height: 100vh;
         
     }
@@ -314,15 +323,15 @@ u{
         position: absolute;
         bottom: 0;
         width: 60vw;
-        border-top-left-radius: 10px;
-        border-top-right-radius: 10px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
         
     }
 
 }
 
 #card-1 {
-    box-shadow: 0 0 20px rgba(0,0,0,0.8);
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
     background-color: #4b7ccf;
     background-image: url(../../images/cork-text.png);
     background-repeat: repeat;
@@ -341,7 +350,7 @@ u{
 }
 
 #card-2 {
-    box-shadow: 0 0 20px rgba(0,0,0,0.8);
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
     background-color: #54B574;
     background-image: url(../../images/cork-text.png);
     background-repeat: repeat;
@@ -389,7 +398,7 @@ u{
     padding-right: 10px;
     color: #000;
     font-size: 3.5rem;
-    border-right: 1px dashed rgba(0, 0, 0, 0.12);
+    
     cursor: pointer;
     
 }
@@ -402,16 +411,20 @@ u{
 
 .content-body{
     padding: 15px;
+    display: flex;
+    justify-content: space-between;
 }
 
 .intro-text{
     font-weight: 500;
     @include xs{
-        font-size: 1.2rem;
+        max-width: 75vw;
+        font-size: 1.1rem;
     }
     @include md{
+        max-width: 45vw;
         padding-top: 2vh;
-        font-size: 1.9rem;
+        font-size: 1.4rem;
         line-height: 3.75vh;
     } 
 }
@@ -421,7 +434,7 @@ u{
         font-size: 1.2rem;
     }
     @include md{
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
 }
 
@@ -430,18 +443,31 @@ u{
     background-color: rgba(214, 210, 210, 0.1);
     border-radius: 5px;
     color: black;
-    padding: 7px 14px;
-    font-size: 16px;
+    padding: 0px 7px;
     font-weight: 700;
+    justify-self: left;
     cursor: pointer;
+    @include xs{
+        font-size: 15px;
+        height: 6em;
+        width: 12em;
+
+    }
+    @include md{
+        font-size: 16px;
+        height: 3.5em;
+        width: 8em;
+        //text-align: right;
+    }
+    
 }
 
 .cv-button:hover {
-    background: #e7e7e767;
+    background: #e7e7e73d;
   }
 
   .cv-button:active{
-    background: #4e4e4e67;
+    background: #4e4e4e3b;
   }
 
 .icon-tray{
@@ -452,5 +478,20 @@ u{
 
 .icon-tray > * {
     font-size: 3em;
-    padding-left: 5px;
+    padding: 7px;
+}
+
+.icon-tray > *:hover {
+    color:rgba(255, 255, 255, 0.705);
+  }
+
+.expand {
+    padding-left: 10px;
+    font-size: 1rem;
+    position: fixed;
+    border-right: 1px dashed rgba(0, 0, 0, 0.12);
+}
+
+#a{
+    height: 50vh;
 }

@@ -11,6 +11,7 @@ import { useStaticQuery, graphql } from "gatsby"
 import Container from "./container"
 import "./layout.css"
 import "./styles/style.css"
+import { Scrollbars } from 'react-custom-scrollbars';
 
 
 
@@ -27,9 +28,11 @@ const Layout = ({ children }) => {
 
   return (
     <>
+
       <div className="wrapper">
-        
-        <Container />
+        <Scrollbars>  
+          <Container />
+        </Scrollbars>
       </div>
     </>
   )
